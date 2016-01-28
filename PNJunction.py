@@ -4,11 +4,11 @@ from math import exp, sqrt, log, pi
 
 class PNJunction:
     """This class encapsulates the methods required to measure parameters of a nanorod based solar cell"""
-    k = 1.38064852*(10**(-23))
-    e = -1.602*(10**(-19))
+    k = 1.38064852*(10**(-23))      # Boltzmann constant; m^2.kg/s^2.K
+    e = -1.602*(10**(-19))          # charge of electron; C
     me = 0.5*9.11*(10**(-31))
     mh = 0.58*9.11*(10**(-31))
-    h = 6.62607*(10**-34)
+    h = 6.62607*(10**-34)           # Planck constant; m^2.kg/s
 
     @staticmethod
     def WorkFunctionPType(T, Na, Eg):
