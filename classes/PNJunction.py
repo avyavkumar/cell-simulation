@@ -6,8 +6,8 @@ class PNJunction:
     """This class encapsulates the methods required to measure parameters of a nanorod based solar cell"""
     k = 1.38064852*(10**(-23))      # Boltzmann constant; m^2.kg/s^2.K
     e = -1.602*(10**(-19))          # charge of electron; C
-    me = 0.5*9.11*(10**(-31))
-    mh = 0.58*9.11*(10**(-31))
+    me = 0.5*9.11*(10**(-31))       # effective mass of the electron
+    mh = 0.58*9.11*(10**(-31))      # effective mass of the hole
     h = 6.62607*(10**-34)           # Planck constant; m^2.kg/s
 
     @staticmethod
@@ -20,7 +20,7 @@ class PNJunction:
         return (k*T/e)*log(Na/ICarrierConc(T,Eg))
 
     @staticmethod
-    def workFunctionNType(T, Nd, Eg):
+    def WorkFunctionNType(T, Nd, Eg):
         """Returns the work function of the P type diode
         @param: T The temperature of operation
         @param: Nd Density of the donor type dopant added to the material
