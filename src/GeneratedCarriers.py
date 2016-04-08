@@ -13,28 +13,28 @@ t_p = 10**(-6)                  # relaxation time of holes; s
 t_n = 10**(-6)                  # relaxation time of electrons; s
 c = 3*(10**8)                   # speed of light; m/s
 
-def HoleDiffusionCoefficient(T, u_p):
+def HoleDiffusionCoefficient(T):
     """
     """
     return (k*T/e)*u_p
 
 
-def ElectronDiffusionCoefficient(T, u_n):
+def ElectronDiffusionCoefficient(T):
     """
     """
     return (k*T/e)*u_n
 
 
-def LengthHoleDiffusion(T, u_p):
+def LengthHoleDiffusion(T):
     """
     """
-    return sqrt(HoleDiffusionCoefficient(T, u_p)*t_p)
+    return sqrt(HoleDiffusionCoefficient(T)*t_p)
 
 
-def LengthElectronDiffusion(T, u_n):
+def LengthElectronDiffusion(T):
     """
     """
-    return sqrt(ElectronDiffusionCoefficient(T, u_n)*t_n)
+    return sqrt(ElectronDiffusionCoefficient(T)*t_n)
 
 
 def PDarkCurrentDensity(T, V, Pno):
